@@ -1,0 +1,13 @@
+{
+  "name": "@park-ui/preset",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "private": true,
+  "dependencies": {
+    "@ark-ui/solid": "5.26.2"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "1.4.3",
+    "typescript": "5.9.3"
+  }
+}
