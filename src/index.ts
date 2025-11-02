@@ -46,8 +46,8 @@ export const createPreset = (
               fg: {
                 default: {
                   value: {
-                    _light: "{colors.gray.12}",
-                    _dark: "{colors.gray.12}",
+                    _light: `{colors.${accentColor.name}.12}`,
+                    _dark: `{colors.${accentColor.name}.12}`,
                   },
                 },
                 muted: {
