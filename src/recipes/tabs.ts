@@ -39,7 +39,6 @@ export const tabs = defineSlotRecipe({
       _focusVisible: {
         zIndex: 1,
         focusVisibleRing: 'outside',
-        focusRingColor: 'colorPalette.solid.bg',
       },
       _disabled: {
         layerStyle: 'disabled',
@@ -47,7 +46,7 @@ export const tabs = defineSlotRecipe({
     },
     content: {
       focusVisibleRing: 'inside',
-      focusRingColor: 'colorPalette.solid.bg',
+
       _horizontal: {
         width: '100%',
       },
@@ -65,52 +64,20 @@ export const tabs = defineSlotRecipe({
   variants: {
     size: {
       xs: {
-        list: {
-          gap: '1',
-        },
-        trigger: {
-          h: '8',
-          minW: '8',
-          textStyle: 'xs',
-          px: '3',
-          gap: '2',
-        },
+        list: { gap: '1' },
+        trigger: { h: '8', minW: '8', textStyle: 'xs', px: '3', gap: '2' },
       },
       sm: {
-        list: {
-          gap: '1',
-        },
-        trigger: {
-          h: '9',
-          minW: '9',
-          textStyle: 'sm',
-          px: '3.5',
-          gap: '2',
-        },
+        list: { gap: '1' },
+        trigger: { h: '9', minW: '9', textStyle: 'sm', px: '3.5', gap: '2' },
       },
       md: {
-        list: {
-          gap: '1',
-        },
-        trigger: {
-          h: '10',
-          minW: '10',
-          textStyle: 'sm',
-          px: '4',
-          gap: '2',
-        },
+        list: { gap: '1' },
+        trigger: { h: '10', minW: '10', textStyle: 'sm', px: '4', gap: '2' },
       },
       lg: {
-        list: {
-          gap: '1',
-        },
-        trigger: {
-          h: '11',
-          minW: '11',
-          textStyle: 'md',
-          px: '4.5',
-          gap: '2',
-        },
+        list: { gap: '1' },
+        trigger: { h: '11', minW: '11', textStyle: 'md', px: '4.5', gap: '2' },
       },
     },
     variant: {
@@ -119,7 +86,6 @@ export const tabs = defineSlotRecipe({
           alignItems: 'stretch',
         },
         list: {
-          borderColor: 'border.default',
           _horizontal: {
             borderBottomWidth: '1px',
           },
@@ -162,9 +128,12 @@ export const tabs = defineSlotRecipe({
       },
       enclosed: {
         list: {
-          '--border-color': '{colors.border.subtle}',
-          background: 'gray.a2',
-          boxShadow: 'inset 0 0 0px 1px var(--border-color)',
+          bg: {
+            _light: 'gray.2',
+            _dark: 'gray.1',
+          },
+          boxShadow: 'inset 0 0 0px 1px var(--shadow-color)',
+          boxShadowColor: 'border',
           borderRadius: 'l3',
           p: '1',
         },
@@ -176,10 +145,13 @@ export const tabs = defineSlotRecipe({
         },
         indicator: {
           borderRadius: 'l2',
-          boxShadow: 'xs',
-          background: {
+          boxShadow: {
+            _light: 'xs',
+            _dark: 'none',
+          },
+          bg: {
             _light: 'white',
-            _dark: 'gray.a2',
+            _dark: 'gray.2',
           },
         },
       },

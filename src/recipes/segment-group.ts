@@ -6,14 +6,18 @@ export const segmentGroup = defineSlotRecipe({
   slots: segmentGroupAnatomy.keys(),
   base: {
     root: {
-      bg: 'gray.surface.bg.active',
+      bg: {
+        _light: 'gray.2',
+        _dark: 'gray.1',
+      },
       borderRadius: 'l3',
+      boxShadow: 'inset 0 0 0px 1px var(--shadow-color)',
+      boxShadowColor: 'border',
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
       isolation: 'isolate',
       pos: 'relative',
-      p: '1',
       _vertical: {
         flexDirection: 'column',
         alignItems: 'stretch',
@@ -21,7 +25,7 @@ export const segmentGroup = defineSlotRecipe({
     },
     item: {
       alignItems: 'center',
-      borderRadius: 'l2',
+      borderRadius: 'l3',
       display: 'inline-flex',
       flexShrink: '0',
       fontWeight: 'medium',
@@ -34,7 +38,6 @@ export const segmentGroup = defineSlotRecipe({
       },
       '&:has(input:focus-visible)': {
         focusVisibleRing: 'outside',
-        focusRingColor: 'colorPalette.solid.bg',
       },
 
       _before: {
@@ -68,9 +71,13 @@ export const segmentGroup = defineSlotRecipe({
     },
 
     indicator: {
-      bg: 'gray.surface.bg',
-      borderRadius: 'l2',
-      boxShadow: 'xs',
+      bg: {
+        _light: 'white',
+        _dark: 'gray.2',
+      },
+      borderWidth: '1px',
+      borderColor: 'gray.surface.border',
+      borderRadius: 'l3',
       height: 'var(--height)',
       pos: 'absolute',
       width: 'var(--width)',

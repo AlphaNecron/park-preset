@@ -49,7 +49,6 @@ export const menu = defineSlotRecipe({
     trigger: {
       _focusVisible: {
         focusVisibleRing: 'outside',
-        focusRingColor: 'colorPalette.solid.bg',
       },
     },
     itemGroupLabel: {
@@ -64,7 +63,7 @@ export const menu = defineSlotRecipe({
         content: '""',
         width: '100%',
         height: '1px',
-        bg: 'gray.4',
+        bg: 'border',
       },
     },
     itemIndicator: {

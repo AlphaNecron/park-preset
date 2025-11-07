@@ -7,12 +7,12 @@ export const link = defineRecipe({
     borderRadius: 'l1',
     cursor: 'pointer',
     display: 'inline-flex',
-    focusRingColor: 'colorPalette.surface.fg',
     focusVisibleRing: 'outside',
     fontWeight: 'medium',
     gap: '1.5',
     outline: 'none',
-    textDecorationThickness: 'from-font',
+    textDecorationLine: 'underline',
+    textDecorationThickness: '0.1em',
     textUnderlineOffset: '0.125em',
     transitionDuration: 'normal',
     transitionProperty: 'text-decoration-color',
@@ -26,14 +26,12 @@ export const link = defineRecipe({
   variants: {
     variant: {
       underline: {
-        textDecoration: 'underline',
         textDecorationColor: 'colorPalette.surface.fg/60',
         _hover: {
           textDecorationColor: 'colorPalette.surface.fg',
         },
       },
       plain: {
-        textDecoration: 'underline',
         textDecorationColor: 'transparent',
         _hover: {
           textDecorationColor: 'colorPalette.surface.fg',

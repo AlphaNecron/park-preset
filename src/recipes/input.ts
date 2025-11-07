@@ -13,7 +13,6 @@ export const input = {
     position: 'relative',
     textAlign: 'start',
     transition: 'colors',
-    transitionProperty: 'box-shadow, border-color',
     width: '100%',
     _disabled: {
       layerStyle: 'disabled',
@@ -29,10 +28,9 @@ export const input = {
         borderWidth: '1px',
         borderColor: 'gray.outline.border',
         focusVisibleRing: 'inside',
-        focusRingColor: 'colorPalette.solid.bg',
         _invalid: {
-          focusRingColor: 'red.9',
-          borderColor: 'red.9',
+          focusRingColor: 'error',
+          borderColor: 'error',
         },
       },
       surface: {
@@ -40,10 +38,10 @@ export const input = {
         borderWidth: '1px',
         borderColor: 'gray.surface.border',
         focusVisibleRing: 'inside',
-        focusRingColor: 'colorPalette.solid.bg',
+
         _invalid: {
-          focusRingColor: 'red.9',
-          borderColor: 'red.9',
+          focusRingColor: 'error',
+          borderColor: 'error',
         },
       },
       subtle: {
@@ -52,28 +50,28 @@ export const input = {
         bg: 'gray.subtle.bg',
         color: 'gray.subtle.fg',
         focusVisibleRing: 'inside',
-        focusRingColor: 'colorPalette.solid.bg',
+
         _invalid: {
-          focusRingColor: 'red.9',
-          borderColor: 'red.9',
+          focusRingColor: 'error',
+          borderColor: 'error',
         },
       },
       flushed: {
         borderBottomWidth: '1px',
-        borderBottomColor: 'gray.a7',
+        borderBottomColor: 'gray.outline.border',
         borderRadius: '0',
-        color: 'gray.12',
+        color: 'fg.default',
         px: '0',
         _invalid: {
-          borderColor: 'red.9',
+          borderColor: 'error',
         },
         _focus: {
           borderColor: 'colorPalette.solid.bg',
           boxShadowColor: 'colorPalette.solid.bg',
           boxShadow: '0 1px 0 0 var(--shadow-color)',
           _invalid: {
-            boxShadowColor: 'red.9',
-            borderColor: 'red.9',
+            borderColor: 'error',
+            boxShadowColor: 'error',
           },
         },
       },
