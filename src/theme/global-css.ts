@@ -1,20 +1,17 @@
-import { defineGlobalStyles } from '@pandacss/dev'
-
-export const globalCss = defineGlobalStyles({
+export const globalCss = {
   extend: {
-    '*, *::before, *::after': {
-      borderColor: 'gray.a4',
+    '*': {
+      '--global-color-border': 'colors.border',
+      '--global-color-placeholder': 'colors.fg.subtle',
+      '--global-color-selection': 'colors.colorPalette.subtle.bg',
+      '--global-color-focus-ring': 'colors.colorPalette.solid.bg',
     },
-    '*::selection': {
-      bg: 'colorPalette.a3',
-    },
-    '*::placeholder': {
-      opacity: 1,
-      color: 'fg.subtle',
+    html: {
+      colorPalette: 'gray',
     },
     body: {
-      background: 'gray.1',
+      background: 'canvas',
       color: 'fg.default',
     },
   },
-})
+}

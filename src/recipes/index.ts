@@ -4,6 +4,7 @@ import { alert } from './alert'
 import { angleSlider } from './angle-slider'
 import { avatar } from './avatar'
 import { badge } from './badge'
+import { breadcrumb } from './breadcrumb'
 import { button } from './button'
 import { card } from './card'
 import { carousel } from './carousel'
@@ -21,14 +22,13 @@ import { field } from './field'
 import { fieldset } from './fieldset'
 import { fileUpload } from './file-upload'
 import { floatingPanel } from './floating-panel'
-import { formLabel } from './form-label'
 import { group } from './group'
 import { heading } from './heading'
 import { hoverCard } from './hover-card'
 import { icon } from './icon'
 import { input } from './input'
 import { inputAddon } from './input-addon'
-import { inputElement } from './input-element'
+import { inputGroup } from './input-group'
 import { kbd } from './kbd'
 import { link } from './link'
 import { listbox } from './listbox'
@@ -71,13 +71,11 @@ export const recipes = {
   badge,
   button,
   code,
-  formLabel,
   group,
   heading,
   icon,
   input,
   inputAddon,
-  inputElement,
   kbd,
   link,
   skeleton,
@@ -91,6 +89,7 @@ export const slotRecipes = {
   alert,
   angleSlider,
   avatar,
+  breadcrumb,
   card,
   carousel,
   checkbox,
@@ -107,6 +106,7 @@ export const slotRecipes = {
   fileUpload,
   floatingPanel,
   hoverCard,
+  inputGroup,
   listbox,
   menu,
   numberInput,

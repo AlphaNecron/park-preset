@@ -1,4 +1,4 @@
-import { avatarAnatomy } from '@ark-ui/react/avatar'
+import { avatarAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const avatar = defineSlotRecipe({
@@ -18,10 +18,6 @@ export const avatar = defineSlotRecipe({
       height: 'var(--avatar-size)',
       fontSize: 'var(--avatar-font-size)',
       borderRadius: 'var(--avatar-radius)',
-      '&[data-group-item]': {
-        borderWidth: '0.125em',
-        borderColor: 'gray.surface.bg',
-      },
     },
     fallback: {
       lineHeight: '1',
@@ -140,15 +136,6 @@ export const avatar = defineSlotRecipe({
           borderWidth: '1px',
           borderColor: 'colorPalette.outline.border',
           color: 'colorPalette.outline.fg',
-        },
-      },
-    },
-    borderless: {
-      true: {
-        root: {
-          '&[data-group-item]': {
-            borderWidth: '0px',
-          },
         },
       },
     },
